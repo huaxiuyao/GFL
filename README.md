@@ -1,5 +1,5 @@
 # GFL (Graph Few-shot Learning)
-Code will be released before July
+Code will be released on July
 
 ## About
 Source code<a href="#note1" id="note1ref"><sup>1</sup></a> of the paper [Graph Few-shot Learning via Knowledge Transfer
