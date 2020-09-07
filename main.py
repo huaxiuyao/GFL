@@ -170,11 +170,10 @@ def main():
             proto_model.load_state_dict(
                 torch.load(
                     args.logdir + '/' + exp_string + '/' + 'proto_model_epoch_{}'.format(args.test_load_epoch)))
-            if args.use_structure == 1:
-                structure_model.load_state_dict(
-                    torch.load(
-                        args.logdir + '/' + exp_string + '/' + 'structure_model_epoch_{}'.format(
-                            args.test_load_epoch)))
+            structure_model.load_state_dict(
+                torch.load(
+                    args.logdir + '/' + exp_string + '/' + 'structure_model_epoch_{}'.format(
+                        args.test_load_epoch)))
         meta_optimiser = torch.optim.Adam(list(meta_model.parameters()) + list(proto_model.parameters()),
                                           lr=args.meta_lr, weight_decay=args.weight_decay)
         evaluate(args, meta_model, meta_optimiser, proto_model, structure_model, data_generator=data_generator,

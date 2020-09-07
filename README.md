@@ -16,7 +16,8 @@ Source code of the paper [Graph Few-shot Learning via Knowledge Transfer
 - put all features in feature.txt, the format is 'node_id, feature_1, ..., feature_n'
 
 ## How to use
-python main.py --datapath=./data/xxx/ --graphpath=./data/xxx/graph/ --in_f_d=xxx --nclasses=xxx --meta_lr=0.01 --update_batch_size=50 --logdir=../logs --hidden=32 --proto=graph --train=1 --inner_train_steps=5 --module_type=sigmoid --structure_dim=32 --hop_concat_type=attention --metatrain_iterations=xxx
+- **meta-training**: python main.py --datapath=./data/xxx/ --graphpath=./data/xxx/graph/ --in_f_d=xxx --nclasses=xxx --meta_lr=0.01 --update_batch_size=50 --logdir=../logs --hidden=32 --proto=graph --train=1 --inner_train_steps=5 --module_type=sigmoid --structure_dim=32 --hop_concat_type=attention --metatrain_iterations=xxx
+- **meta-testing**: python main.py --datapath=./data/xxx/ --graphpath=./data/xxx/graph/ --in_f_d=xxx --nclasses=xxx --meta_lr=0.01 --update_batch_size=50 --logdir=../logs --hidden=32 --proto=graph --train=0 --inner_train_steps=5 --module_type=sigmoid --structure_dim=32 --hop_concat_type=attention --metatrain_iterations=xxx --test_load_epoch=xxx
 
 
 If you find this repository useful in your research, please cite the following paper:
