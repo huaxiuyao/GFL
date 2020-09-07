@@ -2,7 +2,7 @@
 
 ## About
 Source code of the paper [Graph Few-shot Learning via Knowledge Transfer
-](https://arxiv.org/abs/1910.03053)
+](https://arxiv.org/abs/1910.03053). This code is built based upon the pytorch implementation of few-shot learning [few-shot](https://github.com/oscarknagg/few-shot).
 
 ## Data Format:
 1. Meta-training Graphs: 
