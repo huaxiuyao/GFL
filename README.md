@@ -1,9 +1,23 @@
 # GFL (Graph Few-shot Learning)
-Code will be released before July
 
 ## About
-Source code<a href="#note1" id="note1ref"><sup>1</sup></a> of the paper [Graph Few-shot Learning via Knowledge Transfer
+Source code of the paper [Graph Few-shot Learning via Knowledge Transfer
 ](https://arxiv.org/abs/1910.03053)
+
+## Data Format:
+1. Meta-training Graphs: 
+- put all graphs in ./data/graph/, each graph is named as graph_#id.txt. Each line represents one link and the format is 'node_id_1 node_id_2'
+- put the correponding label in ./data/graph/, each graph is named as graph_#id_label.txt. The format is 'node_id label'
+- put all features in ./data/feature.txt. The format is 'node_id, feature_1, ..., feature_n'
+
+2. Meta-testing Graphs: 
+- put all graphs in ./data/graph/, each graph is named as test_graph_#id.txt. Each line represents one link and the format is 'node_id_1 node_id_2'
+- put the correponding label in ./data/graph/, each graph is named as test_graph_#id_label.txt. The format is 'node_id label'
+- put all features in feature.txt, the format is 'node_id, feature_1, ..., feature_n'
+
+## How to use
+python main.py --datapath=./data/xxx/ --graphpath=./data/xxx/graph/ --in_f_d=xxx --nclasses=xxx --meta_lr=0.01 --update_batch_size=50 --logdir=../logs --hidden=32 --proto=graph --train=1 --inner_train_steps=5 --module_type=sigmoid --structure_dim=32 --hop_concat_type=attention --metatrain_iterations=xxx
+
 
 If you find this repository useful in your research, please cite the following paper:
 ```
