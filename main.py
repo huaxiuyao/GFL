@@ -23,12 +23,8 @@ parser.add_argument('--A_n', default=18872 + 1, type=int)
 parser.add_argument('--P_n', default=12334 + 1, type=int)
 parser.add_argument('--V_n', default=18, type=int)
 parser.add_argument("--in_f_d", default=128, type=int)
-parser.add_argument("--sample_g_n", default=100, type=int)
-parser.add_argument("--test_sample_g_n", default=20, type=int)
-parser.add_argument("--max_n", default=20000, type=int)
-parser.add_argument("--min_n", default=10000, type=int)
-parser.add_argument("--restart_p", default=0.05, type=float)
-parser.add_argument("--label_p", default=0.1, type=float)
+parser.add_argument("--sample_g_n", default=100, type=int, help='number of graph for meta-training')
+parser.add_argument("--test_sample_g_n", default=20, type=int, help='number of graph for meta-testing/validation')
 
 # training hyperparameters
 parser.add_argument('--meta_lr', type=float, default=0.001, help='meta learning rate')
@@ -141,10 +137,7 @@ def evaluate(args, model, optimiser, proto_model=None, structure_model=None, dat
 
 
 def main():
-    if 'academic' in args.datapath:
-        data_generator = DataGenerator(args)
-    else:
-        assert ('please enter a valid data path')
+    data_generator = DataGenerator(args)
     meta_model = GCN(nfeat=args.in_f_d,
                      nhid=args.hidden,
                      nclass=args.nclasses,

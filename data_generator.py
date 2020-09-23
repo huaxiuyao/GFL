@@ -44,10 +44,6 @@ class DataGenerator(object):
         self.batch_n = args.batch_n  # batch number
         self.sample_g_n = args.sample_g_n  # train sample graph number
         self.test_sample_g_n = args.test_sample_g_n  # test sample graph number
-        self.max_n = args.max_n  # max graph size
-        self.min_n = args.min_n  # min graph size
-        self.label_p = args.label_p  # label percentage
-        self.restart_p = args.restart_p
         self.A_n = args.A_n
         self.graphpath = args.graphpath
         self.class_n = 4

@@ -4,7 +4,7 @@
 Source code of the paper [Graph Few-shot Learning via Knowledge Transfer
 ](https://arxiv.org/abs/1910.03053). This code is built based upon the pytorch implementation of few-shot learning [few-shot](https://github.com/oscarknagg/few-shot).
 
-## Data Format:
+## Data Format (see sample data for the detailed format):
 1. Meta-training Graphs: 
 - put all graphs in ./data/graph/, each graph is named as graph_#id.txt. Each line represents one link and the format is 'node_id_1 node_id_2'
 - put the correponding label in ./data/graph/, each graph is named as graph_#id_label.txt. The format is 'node_id label'
