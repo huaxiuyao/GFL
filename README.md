@@ -4,7 +4,7 @@
 Source code of the paper [Graph Few-shot Learning via Knowledge Transfer
 ](https://arxiv.org/abs/1910.03053). This code is built based upon the pytorch implementation of few-shot learning [few-shot](https://github.com/oscarknagg/few-shot).
 
-All graphs are sampled from a large graph. For questions about model implementations, please contact [Huaxiu Yao](mailto:yhx662012@gmail.com). For questions about graph sampling, please contact [Chuxu Zhang](mailto:chuxuzhang@brandeis.edu)
+All graphs are sampled from a large graph. For questions about model implementations, please contact [Huaxiu Yao](mailto:yhx662012@gmail.com). For questions about graph sampling, please contact [Chuxu Zhang](mailto:chuxuzhang@brandeis.edu).
 
 ## Data Format (see sample data for the detailed format):
 1. Meta-training Graphs: 
